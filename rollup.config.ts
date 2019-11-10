@@ -3,10 +3,11 @@ import commonjs from "rollup-plugin-commonjs";
 import sourceMaps from "rollup-plugin-sourcemaps";
 import typescript from "rollup-plugin-typescript2";
 import json from "rollup-plugin-json";
+import { uglify } from "rollup-plugin-uglify";
 
 const pkg = require("./package.json");
 
-export default {
+export default [{
   input: "src/worker-from-string.ts",
   output: [
     {
@@ -49,4 +50,21 @@ export default {
     // Resolve source maps to the original source
     sourceMaps()
   ]
-};
+}, {
+  input: "src/worker-from-string.ts",
+  output: {
+    file: "dist/worker-from-string.min.js",
+    format: "umd",
+    name: "workerFromString",
+  },
+  plugins: [
+    // Allow json resolution
+    json(),
+    // Compile TypeScript files
+    typescript({
+      typescript: require("typescript"),
+      useTsconfigDeclarationDir: true
+    }),
+    uglify()
+  ]
+}];
