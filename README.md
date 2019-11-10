@@ -8,6 +8,12 @@ String value to worker converter
 npm i worker-from-string
 ```
 
+or
+
+```
+<script src="<path to library>/worker-from-string.js"></script>
+```
+
 ## Import package to the project
 
 ```
@@ -16,14 +22,12 @@ import workerFromString from 'worker-from-string';
 
 ## Convert String values into Worker
 
-**function workerFromString(...textValues: string[])**
+**workerFromString(...textValues: string[]) => Worker**
 
 Example
 
 ```
-  var workerString = 'self.onmessage = ' + (function onmessage(e){
-    postMessage('Hello ' + e.data);
-  }).toString();
+  var workerString = "self.onmessage = function onmessage(e){ postMessage('Hello ' + e.data); }";
 
   var worker = workerFromString(workerString);
 
