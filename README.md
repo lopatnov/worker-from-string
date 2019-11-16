@@ -4,11 +4,21 @@ String value to worker converter
 
 # Install
 
+Node:
+
+[npmjs repository](//www.npmjs.com/package/worker-from-string)
+
 ```shell
 npm i worker-from-string
 ```
 
-or
+[github repository](//github.com/lopatnov/worker-from-string/packages)
+
+```shell
+npm install @lopatnov/worker-from-string
+```
+
+Browser:
 
 ```html
 <script src="<path to library>/worker-from-string.js"></script>
