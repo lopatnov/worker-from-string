@@ -4,29 +4,31 @@ String value to worker converter
 
 # Install
 
-```
+```shell
 npm i worker-from-string
 ```
 
 or
 
-```
+```html
 <script src="<path to library>/worker-from-string.js"></script>
 ```
 
 ## Import package to the project
 
-```
+```typescript
 import workerFromString from 'worker-from-string';
 ```
 
 ## Convert String values into Worker
 
-**workerFromString(...textValues: string[]) => Worker**
+```typescript
+workerFromString(...textValues: string[]) => Worker
+```
 
 Example
 
-```
+```typescript
   var workerString = "self.onmessage = function onmessage(e){ postMessage('Hello ' + e.data); }";
 
   var worker = workerFromString(workerString);
