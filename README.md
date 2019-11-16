@@ -19,6 +19,10 @@ or
 ```typescript
 import workerFromString from 'worker-from-string';
 ```
+or
+```javascript
+var workerFromString = require("worker-from-string")
+```
 
 ## Convert String values into Worker
 
