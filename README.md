@@ -1,18 +1,24 @@
 # worker-from-string
 
+[![NPM version](https://badge.fury.io/js/worker-from-string.svg)](https://badge.fury.io/js/worker-from-string)
+![License](https://img.shields.io/github/license/lopatnov/jsToString)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%worker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%worker-from-string)
+
 String value to worker converter
 
 # Install
 
 Node:
 
-[npmjs repository](//www.npmjs.com/package/worker-from-string)
+[NPM repository](//www.npmjs.com/package/worker-from-string)
+
+[![https://nodei.co/npm/worker-from-string.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/worker-from-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/worker-from-string)
 
 ```shell
 npm i worker-from-string
 ```
 
-[github repository](//github.com/lopatnov/worker-from-string/packages)
+[GitHub repository](//github.com/lopatnov/worker-from-string/packages)
 
 ```shell
 npm install @lopatnov/worker-from-string
@@ -21,7 +27,7 @@ npm install @lopatnov/worker-from-string
 Browser:
 
 ```html
-<script src="<path to library>/worker-from-string.js"></script>
+<script src="//lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js"></script>
 ```
 
 ## Import package to the project
@@ -53,6 +59,10 @@ Example
 
   worker.postMessage('world');
 ```
+
+# Demo
+
+QUnit tests: [https://lopatnov.github.io/worker-from-string/test/index.html](//lopatnov.github.io/worker-from-string/test/index.html)
 
 # Rights and Agreements
 
