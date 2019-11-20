@@ -24,7 +24,7 @@ npm i worker-from-string
 npm install @lopatnov/worker-from-string
 ```
 
-Browser:
+[Browser](//lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js)
 
 ```html
 <script src="//lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js"></script>
