@@ -12,7 +12,7 @@ NPM:
 
 [![https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 
-[NPM repository](//www.npmjs.com/package/worker-from-string)
+[NPM repository](//www.npmjs.com/package/@lopatnov/worker-from-string)
 
 ```shell
 npm install @lopatnov/worker-from-string
