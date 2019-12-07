@@ -1,4 +1,4 @@
-# worker-from-string
+# @lopatnov/worker-from-string
 
 [![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 ![License](https://img.shields.io/github/license/lopatnov/worker-from-string)
