@@ -8,8 +8,6 @@ String value to worker converter
 
 # Install
 
-[NPM](//www.npmjs.com/package/@lopatnov/worker-from-string)
-
 [![https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 
 ```shell
