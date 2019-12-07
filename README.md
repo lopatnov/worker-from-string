@@ -1,6 +1,6 @@
 # worker-from-string
 
-[![NPM version](https://badge.fury.io/js/%40lopatnov%2worker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
+[![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 ![License](https://img.shields.io/github/license/lopatnov/worker-from-string)
 [![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fworker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fworker-from-string)
 
