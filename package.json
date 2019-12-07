@@ -1,6 +1,6 @@
 {
   "name": "@lopatnov/worker-from-string",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "Apache-2.0",
   "author": "lopatnov",
   "description": "Creates worker from string variable in a browser",
