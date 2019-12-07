@@ -1,24 +1,18 @@
 # worker-from-string
 
-[![NPM version](https://badge.fury.io/js/worker-from-string.svg)](https://badge.fury.io/js/worker-from-string)
-![License](https://img.shields.io/github/license/lopatnov/jsToString)
-[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%worker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%worker-from-string)
+[![NPM version](https://badge.fury.io/js/%40lopatnov%2worker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
+![License](https://img.shields.io/github/license/lopatnov/worker-from-string)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fworker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fworker-from-string)
 
 String value to worker converter
 
 # Install
 
-Node:
+NPM:
+
+[![https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@lopatnov/make-iterable)
 
 [NPM repository](//www.npmjs.com/package/worker-from-string)
-
-[![https://nodei.co/npm/worker-from-string.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/worker-from-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/worker-from-string)
-
-```shell
-npm i worker-from-string
-```
-
-[GitHub repository](//github.com/lopatnov/worker-from-string/packages)
 
 ```shell
 npm install @lopatnov/worker-from-string
