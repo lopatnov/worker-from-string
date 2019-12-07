@@ -2,7 +2,7 @@ declare var BlobBuilder: any;
 declare var WebKitBlobBuilder: any;
 declare var MozBlobBuilder: any;
 
-function workerFromString(...textValues: string[]) {
+function workerFromString(...textValues: string[]): Worker {
   let text = textValues.join(""),
     blob: Blob;
   try {
