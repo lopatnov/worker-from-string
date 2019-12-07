@@ -1,6 +1,6 @@
 {
   "name": "@lopatnov/worker-from-string",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "license": "Apache-2.0",
   "author": "lopatnov",
   "description": "Creates worker from string variable in a browser",
@@ -26,6 +26,7 @@
   "scripts": {
     "build": "tsc --module commonjs && rollup -c rollup.config.ts",
     "test": "npm run build && node run-tests.js",
+    "prepare": "npm i --no-save --no-package-lock terser",
     "configure-npm": "node ./set-registry.js -s https://registry.npmjs.org",
     "configure-gpr": "node ./set-registry.js -s https://npm.pkg.github.com"
   },
