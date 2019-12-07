@@ -1,5 +1,5 @@
 {
-  "name": "@lopatnov/worker-from-string",
+  "name": "worker-from-string",
   "description": "Creates worker from string variable in a browser",
   "main": "dist/worker-from-string.js",
   "authors": [
