@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: npm run publish-npm
+      - run: npm run configure-npm
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -41,7 +41,7 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@lopatnov'
       - run: npm ci
-      - run: npm run publish-gpr
+      - run: npm run configure-gpr
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GPR_PAT }}
