@@ -20,6 +20,12 @@ npm install @lopatnov/worker-from-string
 <script src="//lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js"></script>
 ```
 
+[Bower](//registry.bower.io/packages/worker-from-string)
+
+```shell
+bower install worker-from-string --save
+```
+
 ## Import package to the project
 
 ```typescript
