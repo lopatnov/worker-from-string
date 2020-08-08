@@ -1,6 +1,6 @@
 {
   "name": "@lopatnov/worker-from-string",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "license": "Apache-2.0",
   "author": "lopatnov",
   "description": "Creates worker from string variable in a browser",
@@ -34,15 +34,15 @@
     "access": "public"
   },
   "devDependencies": {
-    "@lopatnov/rollup-plugin-uglify": "^1.2.0",
-    "@types/node": "^12.11.7",
+    "@lopatnov/rollup-plugin-uglify": "^2.1.0",
+    "@types/node": "^14.0.27",
     "express": "^4.17.1",
-    "rollup": "^1.25.2",
+    "rollup": "^2.23.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.24.3",
-    "typescript": "^3.6.4"
+    "rollup-plugin-sourcemaps": "^0.6.2",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^3.9.7"
   }
 }
