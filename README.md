@@ -1,12 +1,12 @@
 # @lopatnov/worker-from-string
 
 [![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
-![License](https://img.shields.io/github/license/lopatnov/worker-from-string)
-[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fworker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fworker-from-string)
+[![License](https://img.shields.io/github/license/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)
 
 String value to worker converter
 
-# Install
+## Install
 
 [![https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/@lopatnov/worker-from-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 
@@ -28,10 +28,14 @@ bower install worker-from-string --save
 
 ## Import package to the project
 
+### TypeScript
+
 ```typescript
 import workerFromString from 'worker-from-string';
 ```
-or
+
+### JavaScript
+
 ```javascript
 var workerFromString = require("worker-from-string")
 ```
@@ -56,12 +60,12 @@ Example
   worker.postMessage('world');
 ```
 
-# Demo
+## Demo
 
 QUnit tests: [https://lopatnov.github.io/worker-from-string/test/index.html](//lopatnov.github.io/worker-from-string/test/index.html)
 
-# Rights and Agreements
+## Rights and Agreements
 
 License [Apache-2.0](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
 
-Copyright 2019 Oleksandr Lopatnov
+Copyright 2019-2020 Oleksandr Lopatnov
