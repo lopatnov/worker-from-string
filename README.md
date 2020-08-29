@@ -6,12 +6,13 @@
 [![GitHub issues](https://img.shields.io/github/issues/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/issues)
 [![GitHub forks](https://img.shields.io/github/forks/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/network)
 [![GitHub stars](https://img.shields.io/github/stars/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/stargazers)
-[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string?activeTab=dependencies)
 ![GitHub top language](https://img.shields.io/github/languages/top/lopatnov/worker-from-string)
 
 [![Patreon](https://img.shields.io/badge/Donate-Patreon-informational)](https://www.patreon.com/lopatnov)
 [![LinkedIn](https://img.shields.io/badge/-lopatnov-informational?style=flat&logo=linkedin)](https://www.linkedin.com/in/lopatnov/)
 [![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)](https://twitter.com/intent/tweet?text=I%20want%20to%20share%20TypeScript%20library:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)
+
+[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string?activeTab=dependencies)
 
 String value to Worker object converter.
 
