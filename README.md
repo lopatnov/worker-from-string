@@ -1,5 +1,7 @@
 # @lopatnov/worker-from-string
 
+String value to Worker object converter.
+
 [![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 [![License](https://img.shields.io/github/license/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
 [![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string?activeTab=dependencies)
@@ -13,8 +15,6 @@
 [![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)](https://twitter.com/intent/tweet?text=I%20want%20to%20share%20TypeScript%20library:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)
 
 [![npm](https://img.shields.io/npm/dt/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
-
-String value to Worker object converter.
 
 ## Install
 
