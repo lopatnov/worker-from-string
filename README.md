@@ -3,11 +3,16 @@
 [![npm](https://img.shields.io/npm/dt/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 [![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 [![License](https://img.shields.io/github/license/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/issues)
+[![GitHub forks](https://img.shields.io/github/forks/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/network)
+[![GitHub stars](https://img.shields.io/github/stars/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/stargazers)
+![GitHub top language](https://img.shields.io/github/languages/top/lopatnov/worker-from-string)
+
 [![Patreon](https://img.shields.io/badge/Donate-Patreon-informational)](https://www.patreon.com/lopatnov)
 [![LinkedIn](https://img.shields.io/badge/-lopatnov-informational?style=flat&logo=linkedin)](https://www.linkedin.com/in/lopatnov/)
-[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)](https://twitter.com/intent/tweet?text=I%20want%20to%20share%20TypeScript%20library:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40lopatnov%2Fworker-from-string)
 
-String value to worker converter
+String value to Worker object converter.
 
 ## Install
 
