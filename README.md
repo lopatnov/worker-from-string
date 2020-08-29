@@ -22,10 +22,10 @@ String value to Worker object converter.
 npm install @lopatnov/worker-from-string
 ```
 
-[Browser](//lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js)
+[Browser](https://lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js)
 
 ```html
-<script src="//lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js"></script>
+<script src="https://lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js"></script>
 ```
 
 [Bower](//registry.bower.io/packages/worker-from-string)
