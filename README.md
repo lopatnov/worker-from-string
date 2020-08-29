@@ -42,10 +42,16 @@ bower install worker-from-string --save
 import workerFromString from 'worker-from-string';
 ```
 
-### JavaScript
+### JavaScript (npm package)
 
 ```javascript
 var workerFromString = require("worker-from-string")
+```
+
+### JavaScript (browser)
+
+```javascript
+var workerFromString = window.workerFromString;
 ```
 
 ## Convert String values into Worker
