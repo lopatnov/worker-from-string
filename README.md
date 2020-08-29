@@ -6,6 +6,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/issues)
 [![GitHub forks](https://img.shields.io/github/forks/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/network)
 [![GitHub stars](https://img.shields.io/github/stars/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/stargazers)
+[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string?activeTab=dependencies)
 ![GitHub top language](https://img.shields.io/github/languages/top/lopatnov/worker-from-string)
 
 [![Patreon](https://img.shields.io/badge/Donate-Patreon-informational)](https://www.patreon.com/lopatnov)
