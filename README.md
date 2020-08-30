@@ -1,6 +1,6 @@
 # @lopatnov/worker-from-string
 
-String value to Worker object converter.
+String value to [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) object converter.
 
 [![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 [![License](https://img.shields.io/github/license/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
