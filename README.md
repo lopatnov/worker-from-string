@@ -78,6 +78,8 @@ Example
 
 ## Demo
 
+Worker Code Editor Demo: [https://lopatnov.github.io/worker-from-string/](https://lopatnov.github.io/worker-from-string/)
+
 QUnit tests: [https://lopatnov.github.io/worker-from-string/test/index.html](//lopatnov.github.io/worker-from-string/test/index.html)
 
 ## Rights and Agreements
