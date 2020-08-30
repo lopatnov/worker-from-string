@@ -1,0 +1,78 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-items: flex-start;
+}
+
+.editor {
+    width: 100%;
+    height: 100%;
+}
+
+.side .panel {
+    display: flex;
+    align-items: stretch;
+    justify-items: flex-start;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.panel.horisontal {
+    flex-direction: row;
+}
+
+.panel.vertical {
+    flex-direction: column;
+}
+
+.top.side,
+.left.side {
+    flex-grow: 6;
+}
+
+.bottom.side,
+.right.side {
+    flex-grow: 4;
+}
+
+.side {
+    border: 1px dashed #eaeaea;
+    border-collapse: collapse;
+}
+
+#execute {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#log {
+    flex-grow: 1000;
+    padding: 8px;
+    overflow: auto;
+}
+
+#log p {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.blue {
+    color: blue;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color: red;
+}

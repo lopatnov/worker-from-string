@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <link href="./reset.css" rel="stylesheet" />
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
+    <link href="./styles.css" rel="stylesheet" />
+    <script src="./node_modules/@lopatnov/worker-from-string/dist/worker-from-string.min.js"></script>
+    <script src="./node_modules/codeflask/build/codeflask.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            "use strict"
+
+            var workerCode =
+                '// Author: O.Lopatnov\n' +
+                '// @lopatnov/worker-from-string library demo\n' +
+                '// Library link: https://github.com/lopatnov/worker-from-string\n' +
+                '// Pay attention that all code is editable\n\n' +
+                '// Worker code (workerString variable)\n\n' +
+                "self.onmessage = function onmessage(e){ postMessage('Hello ' + e.data); }";
+            var jsCode = '// JavaScript Browser code\n' +
+                `
+function execute(workerString) {
+    var worker = workerFromString(workerString);
+
+    worker.onmessage = function(e) {
+        console.log(e.data); // expected 'Hello world' from worker after worker.postMessage('world')
+    };
+
+    worker.postMessage('world');
+}
+`;
+
+            const workerFlask = new CodeFlask('#worker_editor', { language: 'js' });
+
+            workerFlask.onUpdate((code) => {
+                workerCode = code;
+            });
+
+            workerFlask.updateCode(workerCode);
+
+            const jsFlask = new CodeFlask('#js_editor', { language: 'js' });
+
+            jsFlask.onUpdate((code) => {
+                jsCode = code;
+            });
+
+            jsFlask.updateCode(jsCode);
+
+            $('#execute').click(function (event) {
+                $('#log').html('<p class="bold">Log</p>');
+                var jsExec = new Function(`${jsCode}\n\nreturn execute`)();
+                jsExec(workerCode);
+            });
+
+            const nativeLog = console.log;
+            console.log = function () {
+                nativeLog.apply(this, arguments);
+                $('#log').append($('<pre>').text(Array.prototype.join.call(arguments, " ")));
+            }
+
+            const nativeInfo = console.info;
+            console.info = function () {
+                nativeInfo.apply(this, arguments);
+                $('#log').append($('<pre>').addClass('blue').text(Array.prototype.join.call(arguments, " ")));
+            }
+
+            const nativeWarn = console.warn;
+            console.warn = function () {
+                nativeWarn.apply(this, arguments);
+                $('#log').append($('<pre>').addClass('orange').text(Array.prototype.join.call(arguments, " ")));
+            }
+
+            const nativeError = console.error;
+            console.error = function () {
+                nativeError.apply(this, arguments);
+                $('#log').append($('<pre>').addClass('red').text(Array.prototype.join.call(arguments, " ")));
+            }
+
+            $('#execute').click();
+
+            window.onerror = function (msg, url, linenumber) {
+                console.error('Error message: ' + msg + '\nURL: ' + url + '\nLine Number: ' + linenumber);
+                return true;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="left side">
+        <div class="panel vertical">
+            <div class="top side">
+                <div class="panel">
+                    <div id="worker_editor" class="editor"></div>
+                </div>
+            </div>
+            <div class="bottom side">
+                <div class="panel">
+                    <div id="js_editor" class="editor"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right side">
+        <div class="panel vertical">
+            <button id="execute">Execute</button>
+            <div id="log">
+                <p class="bold">Log</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
