@@ -43,7 +43,7 @@ function execute(workerString) {
     jsFlask.updateCode(jsCode);
 
     $('#execute').click(function (event) {
-        $('#log').html('<p class="bold">Log</p>');
+        $('#log').html('<p class="bold">Console Log</p>');
         var jsExec = new Function(`${jsCode}\n\nreturn execute`)();
         jsExec(workerCode);
     });

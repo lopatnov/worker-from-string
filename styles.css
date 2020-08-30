@@ -56,9 +56,12 @@ html, body {
     overflow: auto;
 }
 
-#log p {
+#log p,
+#log pre {
+    overflow: initial;
     padding-top: 4px;
     padding-bottom: 4px;
+    border-bottom: 1px solid #d4d4d4;
 }
 
 .bold {
