@@ -4,7 +4,6 @@ String value to [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker
 
 [![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 [![License](https://img.shields.io/github/license/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
-[![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string?activeTab=dependencies)
 [![GitHub issues](https://img.shields.io/github/issues/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/issues)
 [![GitHub forks](https://img.shields.io/github/forks/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/network)
 [![GitHub stars](https://img.shields.io/github/stars/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/stargazers)
