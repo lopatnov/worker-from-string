@@ -1,32 +1,29 @@
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
-import sourceMaps from "rollup-plugin-sourcemaps";
-import typescript from "rollup-plugin-typescript2";
-import json from "rollup-plugin-json";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import json from "@rollup/plugin-json";
 import uglify from "@lopatnov/rollup-plugin-uglify";
+import { readFileSync } from "fs";
 
-const pkg = require("./package.json");
+const pkg = JSON.parse(readFileSync("./package.json", "utf-8"));
+
+const banner = `/*!
+ * ${pkg.name} v${pkg.version}
+ * Copyright 2019-2026 ${pkg.author}
+ * Licensed under ${pkg.license}
+ */`;
 
 export default [
+  // UMD build (dist) + minified
   {
     input: "src/worker-from-string.ts",
     output: [
       {
-        file: pkg.main,
+        file: "dist/worker-from-string.js",
         name: "workerFromString",
         format: "umd",
-        sourcemap: true
-      },
-      {
-        file: "test/worker-from-string.js",
-        name: "workerFromString",
-        format: "umd",
-        sourcemap: true
-      },
-      {
-        file: pkg.module,
-        format: "es",
-        sourcemap: true
+        sourcemap: true,
+        banner
       }
     ],
     external: [...Object.keys(pkg.peerDependencies || {})],
@@ -36,36 +33,96 @@ export default [
     plugins: [
       json(),
       typescript({
-        typescript: require("typescript"),
-        useTsconfigDeclarationDir: true
+        declaration: true,
+        declarationDir: "dist"
       }),
       commonjs(),
-      resolve(),
-      sourceMaps()
+      resolve()
     ]
   },
+  // UMD minified build (dist)
   {
     input: "src/worker-from-string.ts",
-    output: [
-      {
-        file: "test/worker-from-string.min.js",
-        name: "workerFromString",
-        format: "umd"
-      }
-    ],
-    external: [
-      ...Object.keys(pkg.devDependencies || {}),
-      ...Object.keys(pkg.peerDependencies || {})
-    ],
-    watch: {
-      include: "src/**/*"
+    output: {
+      file: "dist/worker-from-string.min.js",
+      name: "workerFromString",
+      format: "umd",
+      sourcemap: true,
+      banner
     },
+    external: [...Object.keys(pkg.peerDependencies || {})],
     plugins: [
       json(),
-      typescript({
-        typescript: require("typescript"),
-        useTsconfigDeclarationDir: true
-      }),
+      typescript({ declaration: false }),
+      commonjs(),
+      resolve(),
+      uglify()
+    ]
+  },
+  // ES module build (dist)
+  {
+    input: "src/worker-from-string.ts",
+    output: {
+      file: pkg.module,
+      format: "es",
+      sourcemap: true,
+      banner
+    },
+    external: [...Object.keys(pkg.peerDependencies || {})],
+    plugins: [
+      json(),
+      typescript({ declaration: false }),
+      commonjs(),
+      resolve()
+    ]
+  },
+  // CJS build (dist)
+  {
+    input: "src/worker-from-string.ts",
+    output: {
+      file: "dist/worker-from-string.cjs",
+      format: "cjs",
+      sourcemap: true,
+      exports: "auto",
+      banner
+    },
+    external: [...Object.keys(pkg.peerDependencies || {})],
+    plugins: [
+      json(),
+      typescript({ declaration: false }),
+      commonjs(),
+      resolve()
+    ]
+  },
+  // Test build (unminified)
+  {
+    input: "src/worker-from-string.ts",
+    output: {
+      file: "test/worker-from-string.js",
+      name: "workerFromString",
+      format: "umd",
+      sourcemap: true
+    },
+    external: [...Object.keys(pkg.peerDependencies || {})],
+    plugins: [
+      json(),
+      typescript({ declaration: false }),
+      commonjs(),
+      resolve()
+    ]
+  },
+  // Test build (minified)
+  {
+    input: "src/worker-from-string.ts",
+    output: {
+      file: "test/worker-from-string.min.js",
+      name: "workerFromString",
+      format: "umd"
+    },
+    external: [...Object.keys(pkg.peerDependencies || {})],
+    plugins: [
+      json(),
+      typescript({ declaration: false }),
       commonjs(),
       resolve(),
       uglify()

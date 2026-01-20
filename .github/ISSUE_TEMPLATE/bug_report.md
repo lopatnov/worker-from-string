@@ -1,8 +1,8 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
+about: Report a bug to help us improve
+title: '[BUG] '
+labels: 'bug'
 assignees: ''
 
 ---
@@ -11,28 +11,33 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+Code example that reproduces the issue:
+
+```javascript
+import workerFromString from '@lopatnov/worker-from-string';
+
+// Your code here
+const worker = workerFromString('...');
+```
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual behavior**
+What actually happened instead.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Environment:**
+- Browser: [e.g. Chrome 120, Firefox 121, Safari 17]
+- OS: [e.g. Windows 11, macOS 14, Ubuntu 22.04]
+- Library version: [e.g. 1.3.5]
+- Build tool (if applicable): [e.g. Webpack 5, Vite 5, Rollup 4]
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Console errors**
+If applicable, paste any error messages from the browser console.
+
+```
+// Paste errors here
+```
 
 **Additional context**
 Add any other context about the problem here.
