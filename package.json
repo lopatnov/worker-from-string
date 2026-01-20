@@ -1,10 +1,10 @@
 {
   "name": "worker-from-string-demo",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Worker from string demo page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "express-reverse-proxy"
   },
   "keywords": [
     "worker",
@@ -14,8 +14,11 @@
   "author": "lopatnov",
   "license": "Apache-2.0",
   "dependencies": {
-    "@lopatnov/worker-from-string": "^1.3.4",
+    "@lopatnov/worker-from-string": "^2.0.0",
     "codeflask": "^1.4.1",
-    "jquery": "^3.5.1"
+    "jquery": "^4.0.0"
+  },
+  "devDependencies": {
+    "@lopatnov/express-reverse-proxy": "^1.3.0"
   }
 }
