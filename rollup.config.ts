@@ -3,14 +3,15 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import json from "@rollup/plugin-json";
 import uglify from "@lopatnov/rollup-plugin-uglify";
-import { readFileSync } from "fs";
+import  { readFileSync } from 'fs';
 
-const pkg = JSON.parse(readFileSync("./package.json", "utf-8"));
+const pkg = JSON.parse(readFileSync('./package.json', 'utf8'));
 
 const banner = `/*!
  * ${pkg.name} v${pkg.version}
- * Copyright 2019-2026 ${pkg.author}
+ * Copyright 2019-2026 ${pkg.author.name}
  * Licensed under ${pkg.license}
+ *
  */`;
 
 export default [

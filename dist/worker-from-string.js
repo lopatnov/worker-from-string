@@ -1,7 +1,8 @@
 /*!
  * @lopatnov/worker-from-string v2.0.0
- * Copyright 2019-2026 lopatnov
+ * Copyright 2019-2026 Oleksandr Lopatnov
  * Licensed under Apache-2.0
+ *
  */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
