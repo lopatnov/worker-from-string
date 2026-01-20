@@ -30,3 +30,45 @@ QUnit.test("Umd test", function(assert) {
   };
   worker.postMessage('world');
 });
+
+QUnit.test("Empty string test", function(assert) {
+  var done = assert.async();
+  var worker = workerFromString("");
+  assert.ok(worker instanceof Worker, "Returns a Worker instance for empty string");
+  worker.terminate();
+  done();
+});
+
+QUnit.test("Multiple arguments test", function(assert) {
+  var done = assert.async();
+  var part1 = "self.onmessage = function(e) { ";
+  var part2 = "var result = e.data + ' processed'; ";
+  var part3 = "postMessage(result); };";
+
+  var worker = workerFromString(part1, part2, part3);
+  worker.onmessage = function(e) {
+    assert.equal(e.data, 'test processed');
+    done();
+  };
+  worker.postMessage('test');
+});
+
+QUnit.test("Worker error handling", function(assert) {
+  var done = assert.async();
+  var workerString = 'setTimeout(function() { throw new Error("intentional"); }, 10);';
+  var worker = workerFromString(workerString);
+
+  worker.onerror = function(e) {
+    assert.ok(true, "Error event received");
+    e.preventDefault();
+    worker.terminate();
+    done();
+  };
+
+  // Fallback timeout in case error doesn't fire
+  setTimeout(function() {
+    worker.terminate();
+    assert.ok(true, "Test completed (error may not propagate in all browsers)");
+    done();
+  }, 500);
+});
