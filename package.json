@@ -1,21 +1,49 @@
 {
   "name": "@lopatnov/worker-from-string",
-  "version": "1.3.5",
+  "version": "2.0.0",
   "license": "Apache-2.0",
-  "author": "lopatnov",
-  "description": "Creates Worker object from string variable in a browser",
+  "author": {
+    "name": "Oleksandr Lopatnov",
+    "url": "https://github.com/lopatnov"
+  },
+  "description": "Create Web Workers from strings at runtime. A lightweight TypeScript library for dynamic worker generation in browsers.",
   "homepage": "https://lopatnov.github.io/worker-from-string/",
   "keywords": [
-    "TypeScript",
-    "JavaScript",
-    "Worker"
+    "web-worker",
+    "worker",
+    "worker-threads",
+    "blob",
+    "dynamic-worker",
+    "runtime",
+    "browser",
+    "typescript",
+    "javascript",
+    "parallel",
+    "multithreading",
+    "concurrency",
+    "async"
   ],
-  "main": "dist/worker-from-string.js",
+  "main": "dist/worker-from-string.cjs",
   "module": "dist/worker-from-string.es.js",
-  "typings": "dist/worker-from-string.d.ts",
+  "browser": "dist/worker-from-string.js",
+  "types": "dist/worker-from-string.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/worker-from-string.d.ts",
+      "import": "./dist/worker-from-string.es.js",
+      "require": "./dist/worker-from-string.cjs",
+      "browser": "./dist/worker-from-string.js",
+      "default": "./dist/worker-from-string.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lopatnov/worker-from-string.git"
@@ -24,9 +52,8 @@
     "url": "https://github.com/lopatnov/worker-from-string/issues"
   },
   "scripts": {
-    "build": "tsc --module commonjs && rollup -c rollup.config.ts",
+    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "test": "npm run build && node run-tests.js",
-    "prepare": "npm i --no-save --no-package-lock terser",
     "configure-npm": "node ./set-registry.js -s https://registry.npmjs.org",
     "configure-gpr": "node ./set-registry.js -s https://npm.pkg.github.com"
   },
@@ -34,16 +61,16 @@
     "access": "public"
   },
   "devDependencies": {
-    "@lopatnov/rollup-plugin-uglify": "^2.1.1",
-    "@types/node": "^16.0.3",
-    "express": "^4.17.1",
-    "rollup": "^2.52.8",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-sourcemaps": "^0.6.3",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "terser": "^5.7.1",
-    "typescript": "^4.3.5"
+    "@lopatnov/rollup-plugin-uglify": "^3.0.0",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.10.7",
+    "express": "^4.21.2",
+    "rollup": "^4.30.1",
+    "terser": "^5.37.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
   }
 }

@@ -1,8 +1,8 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
-labels: ''
+title: '[FEATURE] '
+labels: 'enhancement'
 assignees: ''
 
 ---
@@ -12,6 +12,12 @@ A clear and concise description of what the problem is. Ex. I'm always frustrate
 
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
+
+**Proposed API (if applicable)**
+```javascript
+// How would you like to use this feature?
+const worker = workerFromString(code, { /* options */ });
+```
 
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.

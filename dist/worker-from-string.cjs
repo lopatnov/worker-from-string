@@ -3,6 +3,8 @@
  * Copyright 2019-2026 lopatnov
  * Licensed under Apache-2.0
  */
+'use strict';
+
 function workerFromString(...textValues) {
     let text = textValues.join(""), blob;
     try {
@@ -21,5 +23,5 @@ function workerFromString(...textValues) {
     return worker;
 }
 
-export { workerFromString as default };
-//# sourceMappingURL=worker-from-string.es.js.map
+module.exports = workerFromString;
+//# sourceMappingURL=worker-from-string.cjs.map
