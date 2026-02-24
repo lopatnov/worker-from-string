@@ -1,13 +1,28 @@
 # @lopatnov/worker-from-string
 
-[![npm](https://img.shields.io/npm/dt/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
-[![NPM version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
+> A library that converts string values into [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) objects in the browser.
+> Create dynamic Web Workers at runtime without separate script files.
+
+[![npm downloads](https://img.shields.io/npm/dt/@lopatnov/worker-from-string)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
+[![npm version](https://badge.fury.io/js/%40lopatnov%2Fworker-from-string.svg)](https://www.npmjs.com/package/@lopatnov/worker-from-string)
 [![License](https://img.shields.io/github/license/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/lopatnov/worker-from-string/node-package-ci.yml)](https://github.com/lopatnov/worker-from-string/actions)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)](https://www.typescriptlang.org/)
+[![GitHub issues](https://img.shields.io/github/issues/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/issues)
 [![GitHub stars](https://img.shields.io/github/stars/lopatnov/worker-from-string)](https://github.com/lopatnov/worker-from-string/stargazers)
 
-A library that converts string values into [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) objects in the browser.
+---
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
+- [Examples](#examples)
+- [Demo](#demo)
+- [Contributing](#contributing)
+- [Built With](#built-with)
+- [License](#license)
+
+---
 
 ## Installation
 
@@ -15,7 +30,7 @@ A library that converts string values into [Web Worker](https://developer.mozill
 npm install @lopatnov/worker-from-string
 ```
 
-### Browser (CDN)
+**Browser (CDN):**
 
 ```html
 <!-- Development version -->
@@ -24,6 +39,8 @@ npm install @lopatnov/worker-from-string
 <!-- Production (minified) version -->
 <script src="https://lopatnov.github.io/worker-from-string/dist/worker-from-string.min.js"></script>
 ```
+
+---
 
 ## Usage
 
@@ -45,17 +62,21 @@ const workerFromString = require("@lopatnov/worker-from-string");
 const workerFromString = window.workerFromString;
 ```
 
+---
+
 ## API
 
-### workerFromString(...textValues: string[]): Worker
+### `workerFromString(...textValues: string[]): Worker`
 
 Creates a Web Worker from string values.
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
+| Parameter    | Type       | Description                                    |
+|--------------|------------|------------------------------------------------|
 | `textValues` | `string[]` | One or more strings containing the worker code |
 
-**Returns:** `Worker` - A new Web Worker instance
+**Returns:** `Worker` — a new Web Worker instance.
+
+---
 
 ## Examples
 
@@ -105,28 +126,35 @@ worker.onmessage = (e: MessageEvent) => {
 worker.postMessage(21);
 ```
 
+---
+
 ## Demo
 
 - **Live Editor:** [https://lopatnov.github.io/worker-from-string/](https://lopatnov.github.io/worker-from-string/)
 - **QUnit Tests:** [https://lopatnov.github.io/worker-from-string/test/index.html](https://lopatnov.github.io/worker-from-string/test/index.html)
 
+---
+
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
-## License
-
-[Apache-2.0](LICENSE)
-
-Copyright 2019-2026 Oleksandr Lopatnov
+- Bug reports → [open an issue](https://github.com/lopatnov/worker-from-string/issues)
+- Questions → [Discussions](https://github.com/lopatnov/worker-from-string/discussions)
+- Found it useful? A [star on GitHub](https://github.com/lopatnov/worker-from-string) helps others discover the project
 
 ---
 
-### Author
+## Built With
 
-**Oleksandr Lopatnov**
+- [TypeScript](https://www.typescriptlang.org/) — strict typing throughout
+- [Rollup](https://rollupjs.org/) — bundled to ESM, CJS, and UMD formats
+- [QUnit](https://qunitjs.com/) — browser-based unit testing framework
+- [Blob API](https://developer.mozilla.org/en-US/docs/Web/API/Blob) — in-memory worker script creation
+- [URL.createObjectURL](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static) — dynamic worker URL generation
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/lopatnov/)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/lopatnov)
+---
 
-If you find this project useful, please consider giving it a star on GitHub!
+## License
+
+[Apache-2.0](https://github.com/lopatnov/worker-from-string/blob/master/LICENSE) © 2019–2026 [Oleksandr Lopatnov](https://github.com/lopatnov) · [LinkedIn](https://www.linkedin.com/in/lopatnov/)

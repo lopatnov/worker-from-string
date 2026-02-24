@@ -3,9 +3,9 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import json from "@rollup/plugin-json";
 import uglify from "@lopatnov/rollup-plugin-uglify";
-import  { readFileSync } from 'fs';
+import { readFileSync } from "fs";
 
-const pkg = JSON.parse(readFileSync('./package.json', 'utf8'));
+const pkg = JSON.parse(readFileSync("./package.json", "utf8"));
 
 const banner = `/*!
  * ${pkg.name} v${pkg.version}
@@ -24,22 +24,22 @@ export default [
         name: "workerFromString",
         format: "umd",
         sourcemap: true,
-        banner
-      }
+        banner,
+      },
     ],
     external: [...Object.keys(pkg.peerDependencies || {})],
     watch: {
-      include: "src/**/*"
+      include: "src/**/*",
     },
     plugins: [
       json(),
       typescript({
         declaration: true,
-        declarationDir: "dist"
+        declarationDir: "dist",
       }),
       commonjs(),
-      resolve()
-    ]
+      resolve(),
+    ],
   },
   // UMD minified build (dist)
   {
@@ -49,7 +49,7 @@ export default [
       name: "workerFromString",
       format: "umd",
       sourcemap: true,
-      banner
+      banner,
     },
     external: [...Object.keys(pkg.peerDependencies || {})],
     plugins: [
@@ -57,8 +57,10 @@ export default [
       typescript({ declaration: false }),
       commonjs(),
       resolve(),
-      uglify()
-    ]
+      uglify({
+        hook: "renderChunk",
+      }),
+    ],
   },
   // ES module build (dist)
   {
@@ -67,15 +69,15 @@ export default [
       file: pkg.module,
       format: "es",
       sourcemap: true,
-      banner
+      banner,
     },
     external: [...Object.keys(pkg.peerDependencies || {})],
     plugins: [
       json(),
       typescript({ declaration: false }),
       commonjs(),
-      resolve()
-    ]
+      resolve(),
+    ],
   },
   // CJS build (dist)
   {
@@ -85,15 +87,15 @@ export default [
       format: "cjs",
       sourcemap: true,
       exports: "auto",
-      banner
+      banner,
     },
     external: [...Object.keys(pkg.peerDependencies || {})],
     plugins: [
       json(),
       typescript({ declaration: false }),
       commonjs(),
-      resolve()
-    ]
+      resolve(),
+    ],
   },
   // Test build (unminified)
   {
@@ -102,23 +104,7 @@ export default [
       file: "test/worker-from-string.js",
       name: "workerFromString",
       format: "umd",
-      sourcemap: true
-    },
-    external: [...Object.keys(pkg.peerDependencies || {})],
-    plugins: [
-      json(),
-      typescript({ declaration: false }),
-      commonjs(),
-      resolve()
-    ]
-  },
-  // Test build (minified)
-  {
-    input: "src/worker-from-string.ts",
-    output: {
-      file: "test/worker-from-string.min.js",
-      name: "workerFromString",
-      format: "umd"
+      sourcemap: true,
     },
     external: [...Object.keys(pkg.peerDependencies || {})],
     plugins: [
@@ -126,7 +112,25 @@ export default [
       typescript({ declaration: false }),
       commonjs(),
       resolve(),
-      uglify()
-    ]
-  }
+    ],
+  },
+  // Test build (minified)
+  {
+    input: "src/worker-from-string.ts",
+    output: {
+      file: "test/worker-from-string.min.js",
+      name: "workerFromString",
+      format: "umd",
+    },
+    external: [...Object.keys(pkg.peerDependencies || {})],
+    plugins: [
+      json(),
+      typescript({ declaration: false }),
+      commonjs(),
+      resolve(),
+      uglify({
+        hook: "renderChunk",
+      }),
+    ],
+  },
 ];

@@ -1,5 +1,5 @@
 /*!
- * @lopatnov/worker-from-string v2.0.0
+ * @lopatnov/worker-from-string v2.1.0
  * Copyright 2019-2026 Oleksandr Lopatnov
  * Licensed under Apache-2.0
  *
